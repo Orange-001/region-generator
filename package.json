@@ -14,10 +14,27 @@
   "contributes": {
     "commands": [
       {
-        "command": "region-generator.helloWorld",
-        "title": "Hello World"
+        "command": "region-creator.addCodeRegion",
+        "title": "region-creator.addCodeRegion"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "region-creator.addCodeRegion",
+        "key": "ctrl+shift+/",
+        "mac": "cmd+shift+/",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/content": [
+        {
+          "command": "region-creator.addCodeRegion",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
