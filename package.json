@@ -1,8 +1,9 @@
 {
   "name": "region-generator",
-  "displayName": "Region Generator",
+  "displayName": "region-generator",
   "description": "Auto-generate #region and #endregion for the selected code block.",
   "version": "0.0.1",
+  "icon": "./dist/assets/img/logo.png",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -14,13 +15,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "region-creator.addCodeRegion",
-        "title": "region-creator.addCodeRegion"
+        "command": "region-generator.addCodeRegion",
+        "title": "region-generator.addCodeRegion"
       }
     ],
     "keybindings": [
       {
-        "command": "region-creator.addCodeRegion",
+        "command": "region-generator.addCodeRegion",
         "key": "ctrl+shift+/",
         "mac": "cmd+shift+/",
         "when": "editorTextFocus"
@@ -29,7 +30,7 @@
     "menus": {
       "editor/content": [
         {
-          "command": "region-creator.addCodeRegion",
+          "command": "region-generator.addCodeRegion",
           "group": "navigation",
           "when": "editorTextFocus"
         }
@@ -45,21 +46,24 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "vpackage": "pnpm vscode:prepublish && pnpm vsce package --no-dependencies",
+    "vpublish": "pnpm vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/vscode": "^1.84.0",
     "@types/mocha": "^10.0.3",
     "@types/node": "18.x",
+    "@types/vscode": "^1.84.0",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
+    "@vscode/test-electron": "^2.3.6",
     "eslint": "^8.52.0",
+    "file-loader": "^6.2.0",
     "glob": "^10.3.10",
     "mocha": "^10.2.0",
-    "typescript": "^5.2.2",
     "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "@vscode/test-electron": "^2.3.6"
+    "webpack-cli": "^5.1.4"
   }
 }
