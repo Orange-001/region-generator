@@ -15,10 +15,21 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "region-generator",
+      "properties": {
+        "region-generator.autoFold.enabled": {
+          "type": "boolean",
+          "default": "true",
+          "description": "Whether to automatically fold"
+        }
+      }
+    },
     "commands": [
       {
         "command": "region-generator.addCodeRegion",
-        "title": "region-generator.addCodeRegion"
+        "title": "addCodeRegion",
+        "category": "region-generator"
       }
     ],
     "keybindings": [
@@ -28,16 +39,7 @@
         "mac": "cmd+shift+/",
         "when": "editorTextFocus"
       }
-    ],
-    "menus": {
-      "editor/content": [
-        {
-          "command": "region-generator.addCodeRegion",
-          "group": "navigation",
-          "when": "editorTextFocus"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",

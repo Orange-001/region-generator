@@ -4,7 +4,7 @@ import './assets/img/logo.png';
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "region-generator" is now active!');
+  console.log('Congratulations, your extension "region-generator" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
@@ -39,7 +39,9 @@ export function activate(context: vscode.ExtensionContext) {
 			builder.replace(selectedRange, `${startIndentation}${insertTextBefore}\n${selectedText}\n${endIndentation}${insertTextAfter}`);
 		});
 
-		vscode.commands.executeCommand('editor.fold');
+    const config = vscode.workspace.getConfiguration('region-generator');
+    const autoFold = config.get("autoFold.enabled");
+		autoFold && vscode.commands.executeCommand('editor.fold');
 
 		const character = getRegionDesIndex(commentType,startIndentation);
 		const position:vscode.Position = startPosition.with(startPosition.line, character);
