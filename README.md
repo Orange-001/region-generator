@@ -1,5 +1,7 @@
 # region-generator
 
+[中文](https://github.com/Orange-001/region-generator/blob/master/README.zh.md)
+
 Generate corresponding region makers quickly and automatically fold them based on different programming languages.
 
 After selecting text, press the shortcut `ctrl+shift+/` to automatically insert the corresponding region makers before and after the text, automatically fold them, and move the cursor position to after the region, making it convenient for you to add descriptions.

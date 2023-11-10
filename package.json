@@ -4,6 +4,8 @@
   "description": "Auto-generate #region and #endregion for the selected code block.",
   "version": "0.0.1",
   "icon": "./dist/assets/img/logo.png",
+  "publisher": "Orange-001",
+  "repository": "https://github.com/Orange-001/region-generator",
   "engines": {
     "vscode": "^1.84.0"
   },

@@ -1,5 +1,7 @@
 # region-generator
 
+[English](https://github.com/Orange-001/region-generator/blob/master/README.md)
+
 根据不同编程语言，快速生成对应的region makers并自动折叠。
 
 选中文本后，按下快捷键`ctrl+shift+/`，自动在文本前后插入对应的region makers，自动折叠，自动移动光标位置到region后，方便你添加描述。
