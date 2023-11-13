@@ -10,7 +10,7 @@ After selecting the text, pressing the shortcut `Ctrl+Shift+/` (Mac: `Cmd+Shift+
 
 Using `vue` as an example:
 
-![img](https://i.postimg.cc/25g1pMFM/region-generator.gif)
+[![region-generator.gif](https://i.postimg.cc/gkPP5HZs/region-generator.gif)](https://postimg.cc/K4QV3LQ3)
 
 ## Currently supported syntax
 
