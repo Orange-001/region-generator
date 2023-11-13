@@ -10,7 +10,7 @@
 
 以`vue`为例
 
-[![region-generator.gif](https://i.postimg.cc/gkPP5HZs/region-generator.gif)](https://postimg.cc/K4QV3LQ3)
+![region-generator.gif](https://s2.loli.net/2023/11/13/EKz2OgvP8sCBrh4.gif)
 
 ## 目前支持的语法
 
